@@ -34,17 +34,22 @@ namespace övning3
             get { return fName; }
             set
             {
-                if (this.fName.Length >= 2 || this.fName.Length <= 10)
-                { fName = value; }
-                
-
+                //Valideringen ska göras på variabeln value 
+                if (value.Length >= 2 && value.Length <= 10)
+                {
+                    fName = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Förnamn måste vara mellan 2 och 10 tecken lång.");
+                }
             }
         }
         //property
         public string LName
         {
             get { return lName; }
-            set { lName = value; }
+            set { lName = value; } //Kan göra validering som ovan.
         }
         public int Age
         {
@@ -56,8 +61,8 @@ namespace övning3
                 }
                 else {
                     throw new ArgumentException("age has to be larger than 0") ; //age = 10000; // varför fungerar det inte med noll? sätts till noll om man inte säger något
-                }
-        }
+                } //Svar: Du ser till att det inte blir 0 genom att göra det obligatoriskt att skicka age på konstruktorn som du har gjort i konstruktorn ovan.
+            }
                 
                 
 

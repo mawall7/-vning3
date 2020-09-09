@@ -17,7 +17,9 @@ namespace övning3
 
         override public string Stats()
         {
-            string str = Age.ToString() + Name + Weight.ToString() + weirdbeek;
+            //string str = Age.ToString() + Name + Weight.ToString() + weirdbeek;
+            string str = $"{base.Stats()} {WeirdBeek}";
+
             return str;
 
         }

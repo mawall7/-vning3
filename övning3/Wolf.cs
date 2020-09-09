@@ -20,7 +20,8 @@ namespace övning3
 
         override public string Stats()
         {
-            string str = Age.ToString() + Name + Weight.ToString() + ranginpack;
+            //string str = Age.ToString() + Name + Weight.ToString() + ranginpack;
+            string str = $"{base.Stats()} {Ranginpack}";
             return str;
 
         }
