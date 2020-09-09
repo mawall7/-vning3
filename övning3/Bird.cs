@@ -21,7 +21,10 @@ namespace övning3
 
         override public string Stats()
         {
-            string str = Age.ToString() + Name + Weight.ToString() + beektype;
+            //Här ska superklassens metod anropas enl uppgift
+            //string str = Age.ToString() + Name + Weight.ToString() + beektype;
+
+            string str = $"{base.Stats()} {Beektype}";
             return str;
 
         }

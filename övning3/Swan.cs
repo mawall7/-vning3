@@ -16,7 +16,8 @@ namespace övning3
 
         override public string Stats()
         {
-            string str = Age.ToString() + Name + Weight.ToString() + orangecolor;
+            //string str = Age.ToString() + Name + Weight.ToString() + orangecolor;
+            string str = $"{base.Stats()} {Orangecolor}";
             return str;
 
         }

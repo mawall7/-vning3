@@ -27,7 +27,8 @@ namespace övning3
 
         override public string Stats()
         {
-            string str = Age.ToString() + Name + Weight.ToString() + numberofscales;
+            //string str = Age.ToString() + Name + Weight.ToString() + numberofscales;
+            string str = $"{base.Stats()} {Numberofsscales}";
             return str;
 
         }
